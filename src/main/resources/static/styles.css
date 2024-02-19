@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'JetBrains';
+    src: local('JetBrains'), url('JetBrainsMono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gosha';
+    src: local('Gosha'), url('GoshaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Finlandica';
+    src: local('Finlandica'), url('Finlandica-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: none;
+}
+
+.news-a {
+    text-decoration: none;
+    font-family: "JetBrains";
+    font-size: 28px;
+    color: #FFFFFF;
+    transition: ease-in-out 0.5s;
+}
+
+.news-a:hover {
+    color: #CC5223;
+}
+
+header {
+    background-color: #252422;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+header img {
+    width: 50px;
+}
+
+.main-news {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    background-color: #CC5223;
+    color: #FFF;
+    padding: 20px 100px;
+}
+
+.main-news h3 {
+    font-family: "Gosha";
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.main-news p {
+    font-family: "Finlandica";
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: white;
+}
+
+.news-div {
+    display: flex;
+    justify-content: space-between;
+    font-family: "JetBrains";
+}
+
+.news-div span {
+    font-size: 14px;
+    color: white;
+}
+
+.other-news {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 100px;
+    margin-bottom: 50px;
+    color: #252422;
+}
+
+.other-news-item {
+    background-color: #CCC5B970;
+    padding: 20px 40px;
+    width: 35vw;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.other-news-item h3 {
+    color: #252422;
+    font-family: "Gosha";
+    letter-spacing: 2px;
+}
+
+.other-news-item p {
+    color: #252422;
+    font-family: "Finlandica";
+    margin-bottom: 20px;
+}
+
+.other-news-item span {
+    color: #252422;
+}
+
+.text {
+    padding: 20px;
+    background-color: #E9E4D9;
+    margin: 0px 100px 0px 100px;
+}
+
+.filter_news {
+    margin: 0px 15px 50px 120px;
+}
+
+.filter_text {
+    margin: 20px 0px 20px 120px;
+    font-family: "Finlandica";
+    font-size: 30px;
+}
+
+.date_input {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    color: #333;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.date_input:focus {
+    outline: 1px solid #d2d2d2;
+}
+
+.filter_btn {
+    font-family: "JetBrains";
+    background-color: #CC5223;
+    font-size: 20px;
+    color: #f9f9f9;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-left: 25px;
+    transition: ease-in-out 0.5s;
+}
+
+.filter_btn:hover {
+    background-color: transparent;
+    color: #CC5223;
+}

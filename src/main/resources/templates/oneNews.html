@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{fragments/settings::settings}"/>
+    <title>Current News</title>
+</head>
+<body>
+    <th:block th:insert="~{fragments/header::header}"/>
+    <section class="main-news" th:object="${news}">
+        <h3 th:utext="${news.header}"></h3>
+        <p th:utext="${news.description}"></p>
+        <div class="news-div">
+            <span th:utext="${news.date}"></span>
+            <span th:utext="${news.category}"></span>
+            <span th:utext="${news.author}"></span>
+        </div>
+    </section>
+
+    <section class="text">
+        <p th:utext="${news.text}"></p>
+    </section>
+</body>
+</html>

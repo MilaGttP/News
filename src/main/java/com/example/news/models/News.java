@@ -27,14 +27,17 @@ public class News {
     private String author;
     @Column(nullable = false)
     private LocalDate date;
-    @Column(length = 1500, nullable = false)
+    @Column(length = 500, nullable = false)
+    private String description;
+    @Column(length = 3000, nullable = false)
     private String text;
 
-    public News(String header, String category, String author, LocalDate date, String text) {
+    public News(String header, String category, String author, LocalDate date, String description, String text) {
         this.header = header;
         this.category = category;
         this.author = author;
         this.date = date;
+        this.description = description;
         this.text = text;
     }
 }

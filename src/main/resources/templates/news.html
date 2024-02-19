@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{fragments/settings::settings}"/>
+    <title>All News</title>
+</head>
+<body>
+    <th:block th:insert="~{fragments/header::header}"/>
+    <p class="filter_text" th:text="${noNewsTodayMessage}"></p>
+    <p class="filter_text" th:text="${emptyDatabaseMessage}"></p>
+    <section class="main-news" th:object="${news}">
+        <a th:href="@{'/oneNews/' + ${news.id}}">
+            <h3 th:utext="${news.header}"></h3>
+            <p th:utext="${news.description}"></p>
+            <div class="news-div">
+                <span th:utext="${news.date}"></span>
+                <span th:utext="${news.category}"></span>
+                <span th:utext="${news.author}"></span>
+            </div>
+        </a>
+    </section>
+
+    <h3 class="filter_text">FILTER BY DATE</h3>
+
+    <form th:action="@{filter}" method="post" class="filter_news">
+        <input type="date" name="date" required class="date_input">
+        <input type="submit" value="SUBMIT" class="filter_btn">
+    </form>
+
+    <section class="other-news">
+        <a th:href="@{'/oneNews/' + ${news.id}}" th:each="news:${newsList}">
+            <div class="other-news-item">
+                <h3 th:utext="${news.header}"></h3>
+                <p th:utext="${news.description}"></p>
+                <div class="news-div">
+                    <span th:utext="${news.date}"></span>
+                    <span th:utext="${news.category}"></span>
+                    <span th:utext="${news.author}"></span>
+                </div>
+            </div>
+        </a>
+    </section>
+</body>
+</html>
